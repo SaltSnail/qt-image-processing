@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>758</width>
+    <height>609</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="Image">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>10</y>
+      <width>621</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QMenu {
+    background-color: #ABABAB; 
+    border: 1px solid black;
+}
+
+QMenu::item {
+
+    background-color: transparent;
+}
+
+QMenu::item:selected { 
+    background-color: #654321;
+}
+QMenuBar {
+    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                                      stop:0 lightgray, stop:1 darkgray);
+    spacing: 3px; /* spacing between menu bar items */
+}
+
+QMenuBar::item {
+    padding: 1px 4px;
+    background: transparent;
+    border-radius: 4px;
+}
+
+QMenuBar::item:selected { /* when selected using mouse or keyboard */
+    background: #a8a8a8;
+}
+
+QMenuBar::item:pressed {
+    background: #888888;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="progressBar">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>520</y>
+      <width>531</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>758</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="Load"/>
+    <addaction name="Save"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Filters</string>
+    </property>
+    <widget class="QMenu" name="menu_3">
+     <property name="title">
+      <string>Expansion</string>
+     </property>
+     <addaction name="separator"/>
+     <addaction name="separator"/>
+     <addaction name="Dilation_Bin"/>
+     <addaction name="Dilation_2"/>
+    </widget>
+    <widget class="QMenu" name="menu_4">
+     <property name="title">
+      <string>Compression</string>
+     </property>
+     <addaction name="Erosion_Bin"/>
+     <addaction name="Erosion_2"/>
+    </widget>
+    <widget class="QMenu" name="menu_5">
+     <property name="title">
+      <string>Openning</string>
+     </property>
+     <addaction name="Opening_Bin"/>
+     <addaction name="Opening_2"/>
+    </widget>
+    <widget class="QMenu" name="menu_6">
+     <property name="title">
+      <string>Closing</string>
+     </property>
+     <addaction name="Closing_Bin"/>
+     <addaction name="Closing_2"/>
+    </widget>
+    <addaction name="Gray_World"/>
+    <addaction name="Stretching"/>
+    <addaction name="Glass"/>
+    <addaction name="Median"/>
+    <addaction name="Motion_blur"/>
+    <addaction name="menu_3"/>
+    <addaction name="menu_4"/>
+    <addaction name="separator"/>
+    <addaction name="menu_5"/>
+    <addaction name="menu_6"/>
+    <addaction name="GrayScale"/>
+    <addaction name="Sepya"/>
+    <addaction name="Lighter"/>
+    <addaction name="Sobel"/>
+    <addaction name="Sharpness_2"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="Load">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="Save">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="Gray_World">
+   <property name="text">
+    <string>Gray world</string>
+   </property>
+  </action>
+  <action name="Stretching">
+   <property name="text">
+    <string>Histogram linear stretch</string>
+   </property>
+  </action>
+  <action name="Glass">
+   <property name="text">
+    <string>Glass</string>
+   </property>
+  </action>
+  <action name="Sharpness">
+   <property name="text">
+    <string>Резкость</string>
+   </property>
+  </action>
+  <action name="Median">
+   <property name="text">
+    <string>Median</string>
+   </property>
+  </action>
+  <action name="Motion_blur">
+   <property name="text">
+    <string>Blur</string>
+   </property>
+  </action>
+  <action name="Dilation_Bin">
+   <property name="text">
+    <string>Binary</string>
+   </property>
+  </action>
+  <action name="Dilation_2">
+   <property name="text">
+    <string>Color</string>
+   </property>
+  </action>
+  <action name="Erosion_Bin">
+   <property name="text">
+    <string>Binary</string>
+   </property>
+  </action>
+  <action name="Erosion_2">
+   <property name="text">
+    <string>Color</string>
+   </property>
+  </action>
+  <action name="Opening_Bin">
+   <property name="text">
+    <string>Binary</string>
+   </property>
+  </action>
+  <action name="Opening_2">
+   <property name="text">
+    <string>Color</string>
+   </property>
+  </action>
+  <action name="Closing_Bin">
+   <property name="text">
+    <string>Binary</string>
+   </property>
+  </action>
+  <action name="Closing_2">
+   <property name="text">
+    <string>Color</string>
+   </property>
+  </action>
+  <action name="GrayScale">
+   <property name="text">
+    <string>Shades of Grey</string>
+   </property>
+  </action>
+  <action name="Sepya">
+   <property name="text">
+    <string>Sepia</string>
+   </property>
+  </action>
+  <action name="Lighter">
+   <property name="text">
+    <string>Brightness</string>
+   </property>
+  </action>
+  <action name="Sobel">
+   <property name="text">
+    <string>Sobel Filter</string>
+   </property>
+  </action>
+  <action name="Sharpness_2">
+   <property name="text">
+    <string>Sparpness</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
